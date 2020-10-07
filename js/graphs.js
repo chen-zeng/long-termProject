@@ -594,7 +594,7 @@ var drawLegend = function(graphDim,margins)
 var initGraph = function(stateData,centerData,mapData)
 {
 
-    var screen = {width:880,height:560}
+    var screen = {width:1100,height:700}
 
     var margins = {left:70,right:120,top:50,bottom:70}
     
@@ -606,7 +606,7 @@ var initGraph = function(stateData,centerData,mapData)
             height:screen.height - margins.top-margins.bottom
         }
   
-var screenS = {width:432,height:336}
+var screenS = {width:630,height:490}
 
     var graphS = 
         {
