@@ -1,0 +1,51 @@
+#tooltip.hidden
+{
+    display:none;
+}
+
+#tooltip
+{
+    position: absolute;
+    width:300px;
+    height:auto;
+    padding: 10px;
+    background-color:beige;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba (0,0,0,0.4);
+    pointer-events: none;
+        
+}
+
+
+p
+{
+    font-style: italic;
+    font-size:14px ;
+}
+
+#map
+{
+    float:left;
+    stroke-width:2px;
+}
+circle
+{
+    stroke-width:1px;
+}
+#scatterplot
+{
+    float:left;
+}
+
+.circleSize
+{
+    font-family: fantasy; 
+    font-size: 16px;
+   
+}
+.circleColor
+{
+    font-style: oblique;
+    font-size: 16px;
+   
+}
