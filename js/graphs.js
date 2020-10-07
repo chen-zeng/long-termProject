@@ -606,7 +606,7 @@ var initGraph = function(stateData,centerData,mapData)
             height:screen.height - margins.top-margins.bottom
         }
   
-var screenS = {width:630,height:490}
+var screenS = {width:540,height:420}
 
     var graphS = 
         {
