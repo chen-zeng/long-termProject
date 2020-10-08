@@ -1,0 +1,31 @@
+body
+{
+    background-color:beige
+}
+
+h1
+{
+    font-family: fantasy;
+    font-size:40px;
+}
+
+.gChart
+{
+    width:700px;
+  float:left;
+}
+.dD
+{
+    width:400px;
+    clear:right;
+}
+.noDC
+{
+    width:400px;
+    clear:right;
+}
+img+p
+{
+    clear:right;
+    font-style: italic
+}
