@@ -76,7 +76,7 @@ var drawLabelsD = function(graphDim,margins)
     
     //x
     labels.append("text")
-        .text("Population Density")
+        .text("Population Density(people per square kilometer)")
          .classed("label",true)
         .attr("text-anchor","middle")
         .attr("x",margins.left+(graphDim.width/2))
@@ -87,7 +87,7 @@ var drawLabelsD = function(graphDim,margins)
     .attr("transform","translate(50,"+ 
               (margins.top+(graphDim.height/2))+")")
         .append("text")
-        .text("Percentage of Covid Death")
+        .text("Percentage of Covid Death(Percent)")
         .classed("label",true)
    .attr("text-anchor","middle")
     .attr("transform","rotate(270)") 
@@ -133,7 +133,7 @@ var drawLabelsP = function(graphDim,margins)
     
     //x
     labels.append("text")
-        .text("Population of 2019")
+        .text("Population of 2019(number of thousand of people)")
          .classed("label",true)
         .attr("text-anchor","middle")
         .attr("x",margins.left+(graphDim.width/2))
@@ -144,7 +144,7 @@ var drawLabelsP = function(graphDim,margins)
     .attr("transform","translate(20,"+ 
               (margins.top+(graphDim.height/2))+")")
         .append("text")
-        .text("Total COVID Cases")
+        .text("Total COVID Cases(number of people)")
         .classed("label",true)
    .attr("text-anchor","middle")
     .attr("transform","rotate(270)") 
@@ -162,7 +162,7 @@ var drawPopulation = function(mapData,target,xScaleP,yScaleP)
     .append("circle")
     .attr("cx", function(state)
     {
-        return xScaleP(state.properties.data.Population2019);
+        return xScaleP(state.properties.data.Population2019/1000);
     })
     .attr("cy", function(state)
     {
@@ -594,7 +594,7 @@ var drawLegend = function(graphDim,margins)
 var initGraph = function(stateData,centerData,mapData)
 {
 
-    var screen = {width:1100,height:700}
+    var screen = {width:1050,height:700}
 
     var margins = {left:70,right:120,top:50,bottom:70}
     
@@ -606,7 +606,7 @@ var initGraph = function(stateData,centerData,mapData)
             height:screen.height - margins.top-margins.bottom
         }
   
-var screenS = {width:630,height:490}
+var screenS = {width:450,height:300}
 
     var graphS = 
         {
@@ -676,7 +676,7 @@ drawLegend(graph,margins);
         console.log("population clicked");
         
         var xScaleP = d3.scaleLinear()
-               .domain([0,40000000])
+               .domain([0,40000/*000*/])
                 .range([0,graphS.width]);
     
     var yScaleP = d3.scaleLinear()
