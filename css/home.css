@@ -3,3 +3,11 @@
     background-image: url("../img/COVID-19.png");
     color:azure;
 }
+#link
+{
+    background-color: beige;
+    width:200px;
+    border-bottom-style: groove double;
+    border-radius: 8px;
+    
+}
